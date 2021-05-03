@@ -7,14 +7,18 @@ async function get(url, headers, params) {
       timeout: 5000,
       params: params,
     });
+    console.log("[Response - " + url + "]");
+    console.log(response);
     return {
       statusCode: response.status,
       data: response.data,
     };
   } catch (e) {
+    console.log("[Error - " + url + "]");
+    console.log(e);
     throw {
-      statusCode: e.response?.data?.stat_code || 500,
-      message: e.response.datsa.stat_msg || "Please, Check your connection",
+      statusCode: e.response.status || 500,
+      message: e.response.data.message || "Please, Check your connection",
     };
   }
 }
@@ -25,14 +29,18 @@ async function post(url, headers, body) {
       headers: headers,
       timeout: 5000,
     });
+    console.log("[Response - " + url + "]");
+    console.log(response);
     return {
       statusCode: response.status,
       data: response.data,
     };
   } catch (e) {
+    console.log("[Error - " + url + "]");
+    console.log(e);
     throw {
-      statusCode: e.response?.data?.stat_code || 500,
-      message: e.response.data.stat_msg || "Please, Check your connection",
+      statusCode: e.response.status || 500,
+      message: e.response.data.message || "Please, Check your connection",
     };
   }
 }
@@ -43,14 +51,18 @@ async function put(url, headers, body) {
       headers: headers,
       timeout: 5000,
     });
+    console.log("[Response - " + url + "]");
+    console.log(response);
     return {
       statusCode: response.status,
       data: response.data,
     };
   } catch (e) {
+    console.log("[Error - " + url + "]");
+    console.log(e);
     throw {
-      statusCode: e.response?.data?.stat_code || 500,
-      message: e.response.data.stat_msg || "Please, Check your connection",
+      statusCode: e.response.status || 500,
+      message: e.response.data.message || "Please, Check your connection",
     };
   }
 }
@@ -61,14 +73,18 @@ async function del(url, headers) {
       headers: headers,
       timeout: 5000,
     });
+    console.log("[Response - " + url + "]");
+    console.log(response);
     return {
       statusCode: response.status,
       data: response.data,
     };
   } catch (e) {
+    console.log("[Error - " + url + "]");
+    console.log(e);
     throw {
-      statusCode: e.response?.data?.stat_code || 500,
-      message: e.response.data.stat_msg || "Please, Check your connection",
+      statusCode: e.response.status || 500,
+      message: e.response.data.message || "Please, Check your connection",
     };
   }
 }
