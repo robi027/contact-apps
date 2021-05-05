@@ -1,4 +1,4 @@
-package com.contactapps;
+package com.robi.contactapps;
 
 import com.facebook.react.ReactActivity;
 
