@@ -128,7 +128,7 @@ class HomeScreen extends Component {
       <View
         style={{
           backgroundColor: colors.blueSky,
-          height: 120,
+          height: 180,
           width: width,
           padding: 20,
         }}
@@ -165,7 +165,7 @@ class HomeScreen extends Component {
     return (
       <View
         style={[
-          { position: "absolute", top: 100 },
+          { position: "absolute", top: 155 },
           styles.input,
           styles.shadow,
         ]}
