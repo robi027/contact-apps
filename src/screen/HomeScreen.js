@@ -98,7 +98,7 @@ class HomeScreen extends Component {
             padding: 8,
           }}
         >
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: "row", flex: 1, marginRight: 60 }}>
             <View style={{ borderRadius: 25, overflow: "hidden" }}>
               <ImageBackground
                 source={images.icEmptyBackground}
@@ -111,7 +111,9 @@ class HomeScreen extends Component {
               </ImageBackground>
             </View>
             <View style={{ marginHorizontal: 4 }}>
-              <Text style={styles.t16Bold}>{item.firstName}</Text>
+              <Text numberOfLines={1} style={styles.t16Bold}>
+                {item.firstName}
+              </Text>
               <Text style={styles.t12Regular}>
                 {item.firstName + " " + item.lastName}
               </Text>
