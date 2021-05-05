@@ -18,7 +18,6 @@ import {
 import VLoading from "../components/VLoading";
 import colors from "../config/colors";
 import images from "../config/images";
-import { width } from "../config/screenDimension";
 import styles from "../config/styles";
 import { isEmpty } from "../utils/Utils";
 
@@ -38,17 +37,7 @@ class ProfileScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <View
-          style={{
-            height: 300,
-            backgroundColor: colors.blueSky,
-            width: width,
-            paddingTop: 100,
-            top: 0,
-            alignItems: "center",
-            position: "absolute",
-          }}
-        />
+        <View style={styles.headerProfile} />
         {this.header()}
         {this.body()}
         <VLoading visible={this.props.data.isLoading} />
@@ -63,27 +52,24 @@ class ProfileScreen extends Component {
         style={{
           height: 50,
           flexDirection: "row",
-          justifyContent: "flex-end",
+          justifyContent: "space-between",
           alignItems: "center",
           paddingHorizontal: 20,
         }}
       >
+        <TouchableOpacity
+          onPress={() => this.props.navigation.goBack()}
+          style={styles.iconButton}
+        >
+          <Image source={images.icArrow} style={{ height: 16, width: 16 }} />
+        </TouchableOpacity>
+
         {!isEmpty(id) && (
           <TouchableOpacity
             onPress={() => this.deleteContact()}
-            style={{
-              height: 32,
-              width: 32,
-              backgroundColor: colors.white,
-              borderRadius: 32 / 2,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            style={styles.iconButton}
           >
-            <Image
-              source={images.emptyBackground}
-              style={{ height: 16, width: 16 }}
-            />
+            <Image source={images.icDelete} style={{ height: 16, width: 16 }} />
           </TouchableOpacity>
         )}
       </View>
@@ -105,7 +91,7 @@ class ProfileScreen extends Component {
           }}
         >
           <ImageBackground
-            source={images.emptyBackground}
+            source={images.icEmptyBackground}
             style={{ height: 100, width: 100 }}
             resizeMode="center"
           >
