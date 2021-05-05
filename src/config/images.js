@@ -1,3 +1,3 @@
 export default {
-  image: require("../../assets/images"),
+  emptyBackground: require("../../assets/images/arrow.png"),
 };
