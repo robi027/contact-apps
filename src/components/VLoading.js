@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import { ActivityIndicator, Modal, View } from "react-native";
 import colors from "../config/colors";
 import { height, width } from "../config/screenDimension";
+import PropTypes from "prop-types";
 
-export default class VLoading extends Component {
+class VLoading extends Component {
+  static propTypes = {
+    visible: PropTypes.bool.isRequired,
+  }
+  
   render() {
     return (
       <Modal
@@ -43,3 +48,5 @@ export default class VLoading extends Component {
     );
   }
 }
+
+export default VLoading;

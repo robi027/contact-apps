@@ -1,0 +1,108 @@
+
+/*
+Interview Question
+
+Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+
+Example:
+Input: "Jenius - Cara Mudah Mengatur Keuangan"
+Output: "suineJ - araC haduM rutagneM nagnaueK"
+Note: In the string, each word is separated by single space and there will not be any extra space in the string.
+*/
+
+const reverseWords = (words) => {
+  var result = "";
+  var myArray = splitWordsBySpace(words);
+
+  for(i=0; i<=myArray.length -1; i++){
+    for(j=myArray[i].length - 1; j>=0; j--){
+      result = result + myArray[i][j];
+    }
+    result = result + " ";
+  }
+
+  return result;
+};
+
+const splitWordsBySpace = (words) => {
+  var word = "";
+  var result = [];
+  for(i=0; i<=words.length; i++){
+    if(words[i] == " " || i == words.length){
+      result.push(word);
+      word = "";
+    }else{
+      word = word + words[i];
+    }
+  }
+  console.log(word);
+  return result;
+}
+
+const reversedWords = reverseWords('Jenius - Cara Mudah Mengatur Keuangan');
+
+console.log(reversedWords);
+
+/*
+
+Interview Question
+
+Given a string S, return the "reversed" string where all characters that are not a letter stay in the same place, and all letters reverse their positions.
+
+Example 1:
+Input: "ab-cd"
+Output: "dc-ba"
+
+Example 2:
+Input: "a-bC-dEf-ghIj"
+Output: "j-Ih-gfE-dCba"
+
+*/
+
+const reverseOnlyLetters = (words) => {
+  let result = "";
+  const reverseOriginString = reverseOrigin(words);
+  const listLetterPosition = findLetterPosition(words);
+  let position = 0;
+  
+  for(j=0; j<reverseOriginString.length; j++){
+    if(!reverseOriginString[j].match(/[a-zA-Z]/)){
+      position -= 1
+    }else{
+      for(i=0; i<listLetterPosition.length; i++){
+        if(j + position == listLetterPosition[i].position){
+          result += listLetterPosition[i].char;
+          position += 1
+        } 
+      }
+      result += reverseOriginString[j];
+    }
+  }
+  if(!words[words.length - 1].match(/[a-zA-Z]/)){
+    result += words[words.length - 1];
+  }
+  console.log(result);
+  return words;
+}
+
+const findLetterPosition = (words) => {
+  let listLetterPosition = [];
+  for(i=0; i<words.length; i++){
+      if(!words[i].match(/[a-zA-Z]/)){
+        listLetterPosition.push({position: i, char: words[i]});
+      }
+    }
+  return listLetterPosition;
+}
+
+const reverseOrigin = (words) => {
+  let result = "";
+  for(i=words.length-1; i>=0; i--){
+    result+= words[i];
+  }
+  return result;
+}
+
+const reversedOnlyLetters = reverseOnlyLetters('a-bC-dEf?ghIj');
+
+console.log(reversedOnlyLetters);

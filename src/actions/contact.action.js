@@ -127,7 +127,7 @@ export function deleteContact(navigation, id) {
   };
 }
 
-function onSuccessSearchContact(data) {
+export function onSuccessSearchContact(data) {
   return {
     type: CONTACT_SEARCH_SUCCESS,
     data: data,
