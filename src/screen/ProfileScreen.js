@@ -24,7 +24,7 @@ import { isEmpty } from "../utils/Utils";
 class ProfileScreen extends Component {
   constructor(props) {
     super(props);
-    const { params } = this.props.route;
+    const { params } = this.props.navigation.state;
     this.state = {
       id: params?.id || "",
       firstName: params?.firstName || "",
