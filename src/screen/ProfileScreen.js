@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Image,
   ImageBackground,
@@ -21,10 +21,10 @@ import images from "../config/images";
 import styles from "../config/styles";
 import { isEmpty } from "../utils/Utils";
 
-class ProfileScreen extends Component {
+class ProfileScreen extends React.Component {
   constructor(props) {
     super(props);
-    const { params } = this.props.route;
+    const { params } = this.props.navigation.state;
     this.state = {
       id: params?.id || "",
       firstName: params?.firstName || "",

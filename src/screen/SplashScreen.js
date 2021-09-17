@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { View, Text, SafeAreaView } from "react-native";
 import styles from "../config/styles";
 
-export default class SplashScreen extends Component {
+export default class SplashScreen extends React.Component {
   render() {
     return (
       <View>

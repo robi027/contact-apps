@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Text,
   View,
@@ -20,7 +20,7 @@ import styles from "../config/styles";
 import VNav from "../navigation/VNav";
 import { isEmpty } from "../utils/Utils";
 
-class HomeScreen extends Component {
+class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

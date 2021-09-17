@@ -1,43 +1,23 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from "@react-navigation/stack";
+import { StackNavigator } from 'react-navigation';
+import { register } from "react-native-bundle-splitter";
 import SplashScreen from "../screen/SplashScreen";
 import HomeScreen from "../screen/HomeScreen";
 import ProfileScreen from "../screen/ProfileScreen";
 
-const Stack = createStackNavigator();
-
-const MainNavigation = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="HomeScreen">
-        <Stack.Screen
-          name="SplashScreen"
-          component={SplashScreen}
-          options={{
-            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-          }}
-        />
-        <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{
-            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-          }}
-        />
-        <Stack.Screen
-          name="ProfileScreen"
-          component={ProfileScreen}
-          options={{
-            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+const MainNavigation = StackNavigator({
+  SplashScreen: {
+    screen: (props) => <SplashScreen {...props}/>
+  },
+  HomeScreen: {
+    screen: (props) => <HomeScreen {...props}/>
+  },
+  ProfileScreen: {
+    screen: (props) => <ProfileScreen {...props}/>
+  },
+}, {
+  initialRouteName: 'HomeScreen',
+  headerMode: "none",
+});
 
 export default MainNavigation;
