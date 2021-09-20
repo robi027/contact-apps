@@ -2,7 +2,7 @@ import React from "react";
 import { StackNavigator } from 'react-navigation';
 import { register } from "react-native-bundle-splitter";
 import SplashScreen from "../screen/SplashScreen";
-import HomeScreen from "../screen/HomeScreen";
+import HomeNewBridge from "../screen/Home/HomeNewBridge";
 import ProfileScreen from "../screen/ProfileScreen";
 
 const MainNavigation = StackNavigator({
@@ -10,7 +10,7 @@ const MainNavigation = StackNavigator({
     screen: (props) => <SplashScreen {...props}/>
   },
   HomeScreen: {
-    screen: (props) => <HomeScreen {...props}/>
+    screen: HomeNewBridge
   },
   ProfileScreen: {
     screen: (props) => <ProfileScreen {...props}/>

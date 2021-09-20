@@ -11,14 +11,14 @@ import {
   RefreshControl,
 } from "react-native";
 import { connect } from "react-redux";
-import { getContact, searchContact } from "../actions/contact.action";
-import VLoadingItem from "../components/VLoadingItem";
-import colors from "../config/colors";
-import images from "../config/images";
-import { width } from "../config/screenDimension";
-import styles from "../config/styles";
-import VNav from "../navigation/VNav";
-import { isEmpty } from "../utils/Utils";
+import { getContact, searchContact } from "../../actions/contact.action";
+import VLoadingItem from "../../components/VLoadingItem";
+import colors from "../../config/colors";
+import images from "../../config/images";
+import { width } from "../../config/screenDimension";
+import styles from "../../config/styles";
+import VNav from "../../navigation/VNav";
+import { isEmpty } from "../../utils/Utils";
 
 class HomeScreen extends React.Component {
   constructor(props) {
