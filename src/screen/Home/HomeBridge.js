@@ -1,5 +1,2 @@
-import { register } from "react-native-bundle-splitter";
-
-const HomeBridge = register({ loader: () => import("./HomeContainer")});
-
-export default HomeBridge;
+import { withSplitter } from "../../utils/Splitter";
+export default withSplitter(() => import("./HomeContainer"));
