@@ -1,16 +1,26 @@
 import React from "react";
 import { StackNavigator } from 'react-navigation';
-import { register } from "react-native-bundle-splitter";
 import SplashScreen from "../screen/SplashScreen";
 import ProfileScreen from "../screen/ProfileScreen";
-import { withSplitter } from "../utils/Splitter";
+import { ChunkManager } from '@callstack/repack/client';
+import { withSplitter } from '../utils/Splitter';
+
+ChunkManager.configure({
+  resolveRemoteChunk: async (chunkId) => {
+    return {
+      url: ``,
+    };
+  },
+});
+
+const HomeScreen = React.lazy(() => import("../screen/Home/HomeScreen.js"));
 
 const MainNavigation = StackNavigator({
   SplashScreen: {
     screen: (props) => <SplashScreen {...props}/>
   },
   HomeScreen: {
-    screen: withSplitter(() => import("../screen/Home/HomeContainer"))
+    screen: (props) => <HomeScreen {...props} />
   },
   ProfileScreen: {
     screen: (props) => <ProfileScreen {...props}/>
