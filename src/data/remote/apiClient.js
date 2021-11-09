@@ -10,7 +10,7 @@ async function get(url, headers, params) {
       timeout: 5000,
       params: params,
     });
-    console.log(response);
+    console.log(response.data);
     return {
       statusCode: response.status,
       data: response.data,
@@ -34,7 +34,7 @@ async function post(url, headers, body) {
       headers: headers,
       timeout: 5000,
     });
-    console.log(response);
+    console.log(response.data);
     return {
       statusCode: response.status,
       data: response.data,
@@ -58,7 +58,7 @@ async function put(url, headers, body) {
       headers: headers,
       timeout: 5000,
     });
-    console.log(response);
+    console.log(response.data);
     return {
       statusCode: response.status,
       data: response.data,
@@ -80,7 +80,7 @@ async function del(url, headers) {
       headers: headers,
       timeout: 5000,
     });
-    console.log(response);
+    console.log(response.data);
     return {
       statusCode: response.status,
       data: response.data,

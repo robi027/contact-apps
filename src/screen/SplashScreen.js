@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView,  } from "react-native";
 import styles from "../config/styles";
+import { connect } from "react-redux";
 
-export default class SplashScreen extends React.Component {
+class SplashScreen extends React.Component {
   render() {
     return (
       <View>
@@ -11,3 +12,10 @@ export default class SplashScreen extends React.Component {
     );
   }
 }
+
+const mapStateToProp = (state) => {
+  console.log(state);
+  return state;
+}
+
+export default connect(mapStateToProp, null)(SplashScreen)

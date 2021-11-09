@@ -13,7 +13,7 @@ const MainNavigation = StackNavigator({
     screen: withSplitter(() => import("../screen/Home/HomeContainer"))
   },
   ProfileScreen: {
-    screen: (props) => <ProfileScreen {...props}/>
+    screen: (props) => <ProfileScxreen {...props}/>
   },
 }, {
   initialRouteName: 'HomeScreen',

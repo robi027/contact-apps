@@ -9,6 +9,8 @@ import {
   TouchableOpacity,
   Animated,
   RefreshControl,
+  NativeModules,
+  NativeEventEmitter,
 } from "react-native";
 import { connect } from "react-redux";
 import { getContact, searchContact } from "../../actions/contact.action";
@@ -19,6 +21,7 @@ import { width } from "../../config/screenDimension";
 import styles from "../../config/styles";
 import VNav from "../../navigation/VNav";
 import { isEmpty } from "../../utils/Utils";
+const eventEmitter = new NativeEventEmitter(NativeModules.EventBusBridge);
 
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -31,6 +34,7 @@ class HomeScreen extends React.Component {
   }
 
   componentDidMount() {
+    eventEmitter.addListener('onLoadComplete', this.showAlert);
     this.props.getContact().then((res) => {
       Animated.spring(this.state.animatedValue, {
         toValue: 1,
@@ -40,6 +44,25 @@ class HomeScreen extends React.Component {
     });
   }
 
+  componentWillUnmount(){
+    eventEmitter.removeListener('onLoadComplete', this.showAlert);
+  }
+
+  showAlert = () => {
+    alert("Profile screen loaded'")
+  };
+
+  openSplashScreen = () => {
+    NativeModules.NavigationBridge.push('SplashScreen');
+  };
+
+  loadSplashScreen = () => {
+    console.log("loadSplashScreen");
+    NativeModules.EventBusBridge.sendEvent('lazyLoad', {
+      screen_name: 'SplashScreen'
+    });
+  };
+
   render() {
     return (
       <View style={{ flex: 1 }}>
@@ -47,6 +70,7 @@ class HomeScreen extends React.Component {
         {this.searchBar()}
         {this.body()}
         {this.fab()}
+        {this.fabGoToPage()}
       </View>
     );
   }
@@ -148,11 +172,25 @@ class HomeScreen extends React.Component {
     );
   }
 
+  fabGoToPage() {
+    return (
+      <TouchableOpacity
+        onPress={this.openSplashScreen}
+        style={[styles.shadow, styles.fab]}
+      >
+        <Image
+          source={images.icAdd}
+          style={{ height: 24, width: 24, tintColor: colors.white }}
+        />
+      </TouchableOpacity>
+    );
+  }
+
   fab() {
     return (
       <TouchableOpacity
-        onPress={() => VNav.profile(this.props.navigation)}
-        style={[styles.shadow, styles.fab]}
+        onPress={this.loadSplashScreen}
+        style={[styles.shadow, styles.fab, {left: 20}]}
       >
         <Image
           source={images.icAdd}
@@ -190,6 +228,7 @@ class HomeScreen extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     data: state.Contact,
   };

@@ -9,14 +9,19 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* contactappsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* contactappsTests.m */; };
 		013562A1B1094368927B709C /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CE6A6118BA54351837BD51E /* Poppins-Bold.otf */; };
-		0688B24848C9AAA1C5E051A3 /* libPods-contactapps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17462F97F32A428D182CE5C3 /* libPods-contactapps.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		275B4EA09452C20DD190DBD8 /* libPods-contactapps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 252DA8D8135B673A5952E3A9 /* libPods-contactapps.a */; };
 		5E99A3F76F514136823DC072 /* Poppins-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669875885F944FCE954EC296 /* Poppins-Italic.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		981D25E92701775F00312F17 /* ProfileScreen.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 981D25E82701775E00312F17 /* ProfileScreen.jsbundle */; };
+		981D25F42701848500312F17 /* EventBusBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 981D25F32701848500312F17 /* EventBusBridge.m */; };
+		981D25F7270184A600312F17 /* NavigationBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 981D25F6270184A600312F17 /* NavigationBridge.m */; };
+		981D25FA270184F300312F17 /* ReactNativeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 981D25F9270184F300312F17 /* ReactNativeHelper.m */; };
+		981D25FD2701856600312F17 /* ReactNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981D25FC2701856600312F17 /* ReactNativeViewController.m */; };
 		BBEE0354CE17469DB6497EE4 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79DEB1E1998F4248ADC51E71 /* Poppins-Regular.otf */; };
-		C1CF66A39780CCD7246CFD24 /* libPods-contactapps-contactappsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 627760B92A08B41A7424BDFE /* libPods-contactapps-contactappsTests.a */; };
+		F6E240A2469F554024C27EB1 /* libPods-contactapps-contactappsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FBB1C36F6A6546BCAF680E /* libPods-contactapps-contactappsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +44,24 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = contactapps/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = contactapps/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = contactapps/main.m; sourceTree = "<group>"; };
-		17462F97F32A428D182CE5C3 /* libPods-contactapps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-contactapps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		252DA8D8135B673A5952E3A9 /* libPods-contactapps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-contactapps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC1529F11E65DB68CECB86F /* Pods-contactapps-contactappsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactapps-contactappsTests.release.xcconfig"; path = "Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4610EEE71BB0416D7FDEEE03 /* Pods-contactapps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactapps.release.xcconfig"; path = "Target Support Files/Pods-contactapps/Pods-contactapps.release.xcconfig"; sourceTree = "<group>"; };
 		4CE6A6118BA54351837BD51E /* Poppins-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.otf"; path = "../assets/fonts/Poppins-Bold.otf"; sourceTree = "<group>"; };
-		627760B92A08B41A7424BDFE /* libPods-contactapps-contactappsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-contactapps-contactappsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FBB1C36F6A6546BCAF680E /* libPods-contactapps-contactappsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-contactapps-contactappsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		669875885F944FCE954EC296 /* Poppins-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.otf"; path = "../assets/fonts/Poppins-Italic.otf"; sourceTree = "<group>"; };
 		79DEB1E1998F4248ADC51E71 /* Poppins-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.otf"; path = "../assets/fonts/Poppins-Regular.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = contactapps/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		981D25E82701775E00312F17 /* ProfileScreen.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProfileScreen.jsbundle; sourceTree = "<group>"; };
+		981D25F22701848500312F17 /* EventBusBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventBusBridge.h; path = contactapps/EventBusBridge.h; sourceTree = "<group>"; };
+		981D25F32701848500312F17 /* EventBusBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventBusBridge.m; path = contactapps/EventBusBridge.m; sourceTree = "<group>"; };
+		981D25F5270184A600312F17 /* NavigationBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NavigationBridge.h; path = contactapps/NavigationBridge.h; sourceTree = "<group>"; };
+		981D25F6270184A600312F17 /* NavigationBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NavigationBridge.m; path = contactapps/NavigationBridge.m; sourceTree = "<group>"; };
+		981D25F8270184F300312F17 /* ReactNativeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReactNativeHelper.h; path = contactapps/ReactNativeHelper.h; sourceTree = "<group>"; };
+		981D25F9270184F300312F17 /* ReactNativeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReactNativeHelper.m; path = contactapps/ReactNativeHelper.m; sourceTree = "<group>"; };
+		981D25FB2701856600312F17 /* ReactNativeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReactNativeViewController.h; path = contactapps/ReactNativeViewController.h; sourceTree = "<group>"; };
+		981D25FC2701856600312F17 /* ReactNativeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReactNativeViewController.m; path = contactapps/ReactNativeViewController.m; sourceTree = "<group>"; };
+		981D260A2701C93500312F17 /* SplashScreen.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = SplashScreen.jsbundle; sourceTree = "<group>"; };
 		B2572CA329FC25D7E70EA324 /* Pods-contactapps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactapps.debug.xcconfig"; path = "Target Support Files/Pods-contactapps/Pods-contactapps.debug.xcconfig"; sourceTree = "<group>"; };
 		D14C578F4880F90CA6E0936E /* Pods-contactapps-contactappsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactapps-contactappsTests.debug.xcconfig"; path = "Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -57,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1CF66A39780CCD7246CFD24 /* libPods-contactapps-contactappsTests.a in Frameworks */,
+				F6E240A2469F554024C27EB1 /* libPods-contactapps-contactappsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0688B24848C9AAA1C5E051A3 /* libPods-contactapps.a in Frameworks */,
+				275B4EA09452C20DD190DBD8 /* libPods-contactapps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +107,20 @@
 		13B07FAE1A68108700A75B9A /* contactapps */ = {
 			isa = PBXGroup;
 			children = (
+				981D25F22701848500312F17 /* EventBusBridge.h */,
+				981D25F32701848500312F17 /* EventBusBridge.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				981D25F5270184A600312F17 /* NavigationBridge.h */,
+				981D25F6270184A600312F17 /* NavigationBridge.m */,
+				981D25F8270184F300312F17 /* ReactNativeHelper.h */,
+				981D25F9270184F300312F17 /* ReactNativeHelper.m */,
+				981D25FB2701856600312F17 /* ReactNativeViewController.h */,
+				981D25FC2701856600312F17 /* ReactNativeViewController.m */,
 			);
 			name = contactapps;
 			sourceTree = "<group>";
@@ -106,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				17462F97F32A428D182CE5C3 /* libPods-contactapps.a */,
-				627760B92A08B41A7424BDFE /* libPods-contactapps-contactappsTests.a */,
+				252DA8D8135B673A5952E3A9 /* libPods-contactapps.a */,
+				53FBB1C36F6A6546BCAF680E /* libPods-contactapps-contactappsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +145,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				981D260A2701C93500312F17 /* SplashScreen.jsbundle */,
+				981D25E82701775E00312F17 /* ProfileScreen.jsbundle */,
 				13B07FAE1A68108700A75B9A /* contactapps */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* contactappsTests */,
@@ -176,8 +201,8 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				016108A904123CE4779222FA /* [CP] Embed Pods Frameworks */,
-				BE2833BF19B4F21E055AFFD5 /* [CP] Copy Pods Resources */,
+				80A752982B14B869DE04068B /* [CP] Copy Pods Resources */,
+				9A87B09BFB8F61FACE323FA9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,8 +224,8 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				A394111C52FE76DE6B49CFBF /* [CP] Embed Pods Frameworks */,
-				37B186B8E2FD8721E0198E65 /* [CP] Copy Pods Resources */,
+				44E5FDBD96E332CF8F2B634C /* [CP] Copy Pods Resources */,
+				63E8A4C0185AF0C3DDD2AF15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,7 +249,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -264,6 +289,7 @@
 				013562A1B1094368927B709C /* Poppins-Bold.otf in Resources */,
 				5E99A3F76F514136823DC072 /* Poppins-Italic.otf in Resources */,
 				BBEE0354CE17469DB6497EE4 /* Poppins-Regular.otf in Resources */,
+				981D25E92701775F00312F17 /* ProfileScreen.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,24 +310,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		016108A904123CE4779222FA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		37B186B8E2FD8721E0198E65 /* [CP] Copy Pods Resources */ = {
+		44E5FDBD96E332CF8F2B634C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,6 +325,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contactapps/Pods-contactapps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63E8A4C0185AF0C3DDD2AF15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contactapps/Pods-contactapps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contactapps/Pods-contactapps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contactapps/Pods-contactapps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66424D8C463ABB0BA00C0F0E /* [CP] Check Pods Manifest.lock */ = {
@@ -340,6 +366,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		80A752982B14B869DE04068B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A87B09BFB8F61FACE323FA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9AE4EE1CC4D4F7166AC05DD7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,40 +420,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A394111C52FE76DE6B49CFBF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-contactapps/Pods-contactapps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-contactapps/Pods-contactapps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contactapps/Pods-contactapps-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE2833BF19B4F21E055AFFD5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contactapps-contactappsTests/Pods-contactapps-contactappsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -430,7 +456,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981D25F42701848500312F17 /* EventBusBridge.m in Sources */,
+				981D25FA270184F300312F17 /* ReactNativeHelper.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				981D25FD2701856600312F17 /* ReactNativeViewController.m in Sources */,
+				981D25F7270184A600312F17 /* NavigationBridge.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.robi.contactapps;
 				PRODUCT_NAME = contactapps;
+				SWIFT_OBJC_BRIDGING_HEADER = "contactapps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -544,6 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.robi.contactapps;
 				PRODUCT_NAME = contactapps;
+				SWIFT_OBJC_BRIDGING_HEADER = "contactapps-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

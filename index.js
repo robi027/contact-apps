@@ -5,6 +5,8 @@
 import React from "react";
 import { AppRegistry } from "react-native";
 import App from "./App";
+import ProfileScreen from "./src/screen/ProfileScreen"
+import SplashScreen from "./src/screen/SplashScreen";
 import Navigation from "./src/navigation/index";
 import { name as appName } from "./app.json";
 import { Provider } from "react-redux";
@@ -22,4 +24,14 @@ const AppContainer = () => {
   );
 };
 
+const AppContainerTwo = () => {
+  return (
+    <Provider store={store}>
+      <SplashScreen />
+    </Provider>
+  );
+};
+
 AppRegistry.registerComponent(appName, () => AppContainer);
+AppRegistry.registerComponent('ProfileScreen', () => ProfileScreen);
+AppRegistry.registerComponent('SplashScreen', () => AppContainerTwo);
